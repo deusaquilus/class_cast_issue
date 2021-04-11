@@ -16,7 +16,7 @@ object MirrorType {
   class Container[T]
 
   inline def decode[T]: String =
-    //PrintMac {
+    //PrintMac { // uncomment to have a look at the code
     summonFrom {
       case ev: Mirror.ProductOf[T] =>
         s"Product-${new Container[ev.MirroredElemLabels]}"
